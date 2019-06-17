@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import './Home.less';
 
-export class Home extends Component {
+export default class Home extends Component {
   public render() {
     return (
       <h2>Home</h2>

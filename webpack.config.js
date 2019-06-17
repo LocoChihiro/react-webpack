@@ -11,10 +11,29 @@ const config = {
   entry: path.join(__dirname, 'src/index.tsx'),
   module: {
     rules: [
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader", // 创建style标签，并将css添加进去
+          "css-loader", // 编译css
+          // "postcss-loader",
+          "less-loader" // 编译lesss
+        ]
+      },
       { 
-        test: /\.tsx?$/, 
-        exclude: /node_modules/,
-        loader: ["babel-loader", "ts-loader"]
+        test: /\.tsx?$/,
+        loader: ["babel-loader", "ts-loader"],
+        exclude: /node_modules/, 
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            outputPath: 'images/', // 图片输出的路径
+            limit: 10 * 1024
+          }
+        }
       }
     ]
   },

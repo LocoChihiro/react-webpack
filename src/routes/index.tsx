@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-class Home extends React.Component {
-  public render() {
-    return (
-      <h2>Home</h2>
-    );
-  }
-}
+import Home from "@/pages/Home";
+// class Home extends React.Component {
+//   public render() {
+//     return (
+//       <h2>Home</h2>
+//     );
+//   }
+// }
 
 class About extends React.Component {
   render () {
