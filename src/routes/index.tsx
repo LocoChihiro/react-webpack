@@ -1,13 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Home from "@/pages/Home";
-// class Home extends React.Component {
-//   public render() {
-//     return (
-//       <h2>Home</h2>
-//     );
-//   }
-// }
+import Loadable from "react-loadable";
+// import Home from "@/pages/Home";
+// const Home = React.lazy(() => import("@/pages/Home"));
+
+const Loading = () => <div>Loading...</div>;
+const Home = Loadable({
+  loader: () => import("@/pages/Home"),
+  loading: Loading
+});
+
 
 class About extends React.Component {
   render () {
