@@ -54,7 +54,7 @@
     "es6-promise": "^4.2.8",
     "isomorphic-fetch": "^2.2.1",
     "less": "^3.9.0",
-    "postcss": "^7.0.17",
+    "postcss": "^8.2.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.11.1",
